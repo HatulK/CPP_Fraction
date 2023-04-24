@@ -66,6 +66,10 @@ namespace ariel {
 
         Fraction operator/(float num) const;
 
+        Fraction operator/(double num) const;
+
+        Fraction operator/(int num) const;
+
         bool operator==(const Fraction &other) const;
 
         bool operator==(float number) const;
@@ -125,12 +129,12 @@ namespace ariel {
         Fraction &operator++();
 
         // Addition operator
-        friend Fraction operator+(const Fraction& f, double d);
-        friend Fraction operator+(double d, const Fraction& f);
+        friend Fraction operator+(const Fraction& frac, double doub);
+        friend Fraction operator+(double doub, const Fraction& frac);
 
 // Subtraction operator
-        friend Fraction operator-(const Fraction& f, double d);
-        friend Fraction operator-(double d, const Fraction& f);
+        friend Fraction operator-(const Fraction& frac, double doub);
+        friend Fraction operator-(double doub, const Fraction& frac);
 
 
         Fraction operator++(int); //what does it do?
@@ -145,7 +149,7 @@ namespace ariel {
         friend std::ostream &operator<<(std::ostream &out, const Fraction &fraction);
 
         // Helper functions
-        int gcd(int a, int b) const;
+        int gcd(int num1, int num2) const;
 
         void simplify();
 

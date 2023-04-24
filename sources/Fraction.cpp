@@ -4,17 +4,18 @@
 #include "Fraction.hpp"
 namespace ariel {
 
-    Fraction::Fraction() {
-
-    }
+    Fraction::Fraction() {    }
 
     Fraction::Fraction(int numerator, int denominator) {
-
+        if(this->denominator) throw std::logic_error("Denominator cannot be 0");
+        this->numerator=numerator;
+        this->denominator=denominator;
     }
 
     Fraction::Fraction(float num) {
 
     }
+
 
     Fraction::Fraction(const Fraction &other) {
 
@@ -302,11 +303,19 @@ namespace ariel {
     }
 
     bool Fraction::operator>(double num) const {
-        return false;
+        return true;
     }
 
     bool Fraction::operator<(double num) const {
-        return false;
+        return true;
+    }
+
+    Fraction Fraction::operator/(double num) const {
+        return Fraction(1,1);
+    }
+
+    Fraction Fraction::operator/(int num) const {
+        return Fraction(1,1);
     }
 
 
