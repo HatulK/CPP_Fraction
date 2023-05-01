@@ -4,7 +4,7 @@
 #include "Fraction.hpp"
 namespace ariel {
 
-    Fraction::Fraction() {    }
+    Fraction::Fraction() = default;
 
     Fraction::Fraction(int numerator, int denominator) {
         if(this->denominator) throw std::logic_error("Denominator cannot be 0");
@@ -26,47 +26,47 @@ namespace ariel {
     }
 
     Fraction Fraction::operator-(const Fraction &other) const {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction Fraction::operator-(float num) const {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction operator-(float num, const Fraction &other) {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction Fraction::operator+(const Fraction &other) const {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction Fraction::operator+(float num) const {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction operator+(float num, const Fraction &other) {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction Fraction::operator*(const Fraction &other) const {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction Fraction::operator*(float num) const {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction operator*(float num, const Fraction &other) {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction Fraction::operator/(const Fraction &other) const {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction Fraction::operator/(float num) const {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
 
@@ -163,15 +163,15 @@ namespace ariel {
     }
 
     Fraction Fraction::operator-() const {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction Fraction::operator-(const Fraction &other) {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction Fraction::operator/(const Fraction &other) {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction &Fraction::operator++() {
@@ -179,7 +179,7 @@ namespace ariel {
     }
 
     Fraction Fraction::operator++(int) {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction &Fraction::operator--() {
@@ -187,7 +187,7 @@ namespace ariel {
     }
 
     Fraction Fraction::operator--(int) {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction::operator float() const {
@@ -211,15 +211,15 @@ namespace ariel {
     }
 
     Fraction operator/(float frac1, const Fraction &frac2) {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction operator+(const Fraction &frac2, float frac1) {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction operator-(const Fraction &frac2, float frac1) {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     int Fraction::gcd(int a, int b) const {
@@ -227,11 +227,11 @@ namespace ariel {
     }
 
     Fraction operator*(const Fraction &frac2, float frac1) {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     Fraction operator/(const Fraction &frac2, float frac1) {
-        return Fraction(1, 1);
+        return {1, 1};
     }
 
     bool operator>(const Fraction &frac2, float frac1) {
@@ -275,23 +275,23 @@ namespace ariel {
     Fraction::Fraction(Fraction &&other) noexcept {    }
 
     Fraction operator+(const Fraction &f, double d) {
-        return Fraction(1,1);
+        return {1,1};
     }
 
     Fraction operator+(double d, const Fraction &f) {
-        return Fraction(1,1);
+        return {1,1};
     }
 
     Fraction operator-(const Fraction &f, double d) {
-        return Fraction(1,1);
+        return {1,1};
     }
 
     Fraction operator-(double d, const Fraction &f) {
-        return Fraction(1,1);
+        return {1,1};
     }
 
     Fraction Fraction::operator-(int num) const {
-        return Fraction();
+        return {};
     }
 
     bool Fraction::operator>(int num) const {
@@ -311,11 +311,11 @@ namespace ariel {
     }
 
     Fraction Fraction::operator/(double num) const {
-        return Fraction(1,1);
+        return {1,1};
     }
 
     Fraction Fraction::operator/(int num) const {
-        return Fraction(1,1);
+        return {1,1};
     }
 
 
